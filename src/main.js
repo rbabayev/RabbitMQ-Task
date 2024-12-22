@@ -1,9 +1,7 @@
 import { connect } from "amqplib";
 
 const receiveMessages = async () => {
-  const connection = await connect(
-    "amqps://timdpxga:JO6ET9ZvdFgzypGGLINmNX5yO5DeCwpv@toucan.lmq.cloudamqp.com/timdpxga"
-  );
+  const connection = await connect("url");
   const channel = await connection.createChannel();
   const queue = "myqueue-items";
 
